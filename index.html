@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>בדיקת תיק ביטוח — ייעוץ והדרכות</title>
-  <meta name="description" content="בדיקה חינמית ומיידית של תיק הביטוח שלך. מלא פרטים וקבל תשובה ישירות למייל. ייעוץ והדרכות — ביטוח ופיננסים." />
+  <title>בדיקת כפל ביטוחים | ייעוץ והדרכות</title>
+  <meta name="description" content="בדיקה חינמית של כפל ביטוחים. מלא את פרטיך ונציג מומחה יחזור אליך בהקדם עם תוצאות הבדיקה." />
   <style>
     body {font-family: 'Heebo', sans-serif; background: #0b0b0b; color: #fff; direction: rtl; margin: 0; padding: 0;}
     .container {max-width: 600px; margin: auto; padding: 30px; background: #1e1e1e; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.4); margin-top: 40px;}
@@ -13,36 +13,48 @@
     input, textarea {width: 100%; padding: 10px; border-radius: 8px; border: none; margin-top: 5px;}
     button {width: 100%; background: linear-gradient(90deg, #ff8a00, #ffcc00); color: #000; font-weight: bold; border: none; padding: 12px; margin-top: 20px; border-radius: 999px; cursor: pointer;}
     button:hover {transform: scale(1.02);}
-    .popup {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center;}
-    .popup-content {background: #111; padding: 20px 30px; border-radius: 10px; text-align: center; color: #fff;}
+    .logo {text-align: center; margin-bottom: 20px;}
+    .logo img {max-width: 150px;}
+    .popup {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; z-index: 999;}
+    .popup-content {background: #111; padding: 25px 30px; border-radius: 10px; text-align: center; color: #fff; max-width: 400px;}
+    .popup-content h2 {color: #ffd700;}
+    .popup-content a {display: inline-block; margin-top: 15px; background: #25D366; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold;}
+    .popup-content a:hover {background: #20b358;}
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>בדיקת תיק הביטוח שלך</h1>
-    <p style="text-align:center; color:#ccc">מלא את הפרטים הבאים ונחזור אליך בהקדם.</p>
-    <form id="contactForm" action="https://formspree.io/f/xblzbgeo" method="POST">
+    <div class="logo">
+      <img src="logo.png" alt="לוגו החברה" />
+    </div>
+    <h1>בדוק אם יש לך כפל ביטוחים</h1>
+    <p style="text-align:center; color:#ccc">מלא את הפרטים הבאים ונחזיר לך תשובה מדויקת בתוך זמן קצר.</p>
+    <form id="contactForm" action="https://formspree.io/f/mblzqwgy" method="POST">
       <label>שם מלא:</label>
       <input type="text" name="name" placeholder="הזן שם מלא" required>
 
-      <label>טלפון:</label>
-      <input type="tel" name="phone" placeholder="הזן מספר טלפון" required>
+      <label>תעודת זהות:</label>
+      <input type="text" name="id_number" placeholder="הזן מספר תעודת זהות" required>
 
-      <label>אימייל:</label>
-      <input type="email" name="email" placeholder="example@email.com" required>
+      <label>טלפון נייד:</label>
+      <input type="tel" name="phone" placeholder="הזן מספר טלפון נייד" required>
 
-      <label>פרטים נוספים:</label>
-      <textarea name="message" placeholder="כתוב הודעה או פרטים נוספים..."></textarea>
+      <label>תאריך לידה:</label>
+      <input type="date" name="birth_date" required>
 
-      <button type="submit">שלח</button>
+      <label>תאריך הנפקת תעודת זהות:</label>
+      <input type="date" name="id_issue_date" required>
+
+      <button type="submit">בדוק כפל ביטוחים</button>
     </form>
   </div>
 
   <div class="popup" id="popup">
     <div class="popup-content">
-      <h2>תודה!</h2>
-      <p>ההודעה נשלחה בהצלחה, נחזור אליך בקרוב.</p>
-      <button onclick="closePopup()">סגור</button>
+      <h2>נמצא כפל ביטוח!</h2>
+      <p>נראה שיש לך כפל ביטוחים. נציג מטעמנו יחזור אליך בהקדם.</p>
+      <a href="https://wa.me/972547768879?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%9E%D7%99%D7%9C%D7%90%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%98%D7%95%D7%A4%D7%A1%20%D7%91%D7%90%D7%AA%D7%A8%20%D7%9C%D7%92%D7%91%D7%99%20%D7%9B%D7%A4%D7%9C%20%D7%91%D7%99%D7%98%D7%95%D7%97%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%99%D7%97%D7%94%20%D7%A7%D7%A6%D7%A8%D7%94." target="_blank">לבירור מידי לחץ כאן</a><br>
+      <button onclick="closePopup()" style="margin-top:15px; background:#ffcc00; color:#000; border:none; padding:8px 15px; border-radius:8px; cursor:pointer;">סגור</button>
     </div>
   </div>
 
